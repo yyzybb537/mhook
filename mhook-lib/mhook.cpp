@@ -162,9 +162,9 @@ typedef BOOL (WINAPI * _Thread32Next)(
 
 //=========================================================================
 // Bring in the toolhelp functions from kernel32
-_CreateToolhelp32Snapshot fnCreateToolhelp32Snapshot = (_CreateToolhelp32Snapshot) GetProcAddress(GetModuleHandle(L"kernel32"), "CreateToolhelp32Snapshot");
-_Thread32First fnThread32First = (_Thread32First) GetProcAddress(GetModuleHandle(L"kernel32"), "Thread32First");
-_Thread32Next fnThread32Next = (_Thread32Next) GetProcAddress(GetModuleHandle(L"kernel32"), "Thread32Next");
+_CreateToolhelp32Snapshot fnCreateToolhelp32Snapshot = (_CreateToolhelp32Snapshot) GetProcAddress(GetModuleHandleA("kernel32"), "CreateToolhelp32Snapshot");
+_Thread32First fnThread32First = (_Thread32First) GetProcAddress(GetModuleHandleA("kernel32"), "Thread32First");
+_Thread32Next fnThread32Next = (_Thread32Next) GetProcAddress(GetModuleHandleA("kernel32"), "Thread32Next");
 
 //=========================================================================
 // Internal function:
